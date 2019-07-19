@@ -1,3 +1,4 @@
 # face-emotion
-# pip3 install mtcnn
-give me a star
+you need:
+  pip3 install mtcnn
+  give me a star
