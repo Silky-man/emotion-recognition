@@ -6,13 +6,10 @@ from keras.models import load_model
 from utils import preprocess_input
 
 # parameters for loading data and images
-#source = "rtsp://admin:sxt12345678@192.168.3.108:554/cam/realmonitor?channel=1&subtype=0"
 detector=MTCNN()
-emotion_model_path = 'fer2013_mini_XCEPTION.33-0.65.hdf5'
-# emotion_labels = {0:'angry',1:'disgust',2:'fear',3:'happy',
-#                 4:'sad',5:'surprise',6:'neutral'}
-emotion_labels = {0:'doubt',1:'doubt',2:'doubt',3:'understand',
-                  4:'doubt',5:'doubt',6:'neutral'}
+emotion_model_path = 'emotion.hdf5'
+ emotion_labels = {0:'angry',1:'disgust',2:'fear',3:'happy',
+                 4:'sad',5:'surprise',6:'neutral'}
 emotion_classifier = load_model(emotion_model_path, compile=False)
 emotion_target_size = emotion_classifier.input_shape[1:3]
 # starting video streaming
