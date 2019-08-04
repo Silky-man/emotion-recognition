@@ -8,7 +8,7 @@ from utils import preprocess_input
 # parameters for loading data and images
 detector=MTCNN()
 emotion_model_path = 'emotion.hdf5'
- emotion_labels = {0:'angry',1:'disgust',2:'fear',3:'happy',
+emotion_labels = {0:'angry',1:'disgust',2:'fear',3:'happy',
                  4:'sad',5:'surprise',6:'neutral'}
 emotion_classifier = load_model(emotion_model_path, compile=False)
 emotion_target_size = emotion_classifier.input_shape[1:3]
